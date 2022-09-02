@@ -28,6 +28,7 @@ const expected5 = true;
  * @param {string} str
  * @returns {boolean} Whether the given str is a palindrome or not.
  */
+
 function isPalindrome(str) {
     var len = Math.floor(str.length / 2);
 for (var i = 0; i < len; i++)
@@ -49,30 +50,30 @@ console.log(isPalindrome(str5)) //expected: true
   Associative arrays are sometimes called maps because a key (string) maps to a value
 */
 
-const keys1 = ["flavor", "size", "is_delicious"];
-const vals1 = ["chocolate", 10, true];
+// const keys1 = ["flavor", "size", "is_delicious"];
+// const vals1 = ["chocolate", 10, true];
 
-const expectedA = {
-    flavor: 'chocolate',
-    size: 10,
-    is_delicious: true,
-};
+// const expectedA = {
+//     flavor: 'chocolate',
+//     size: 10,
+//     is_delicious: true,
+// };
 
-const keys2 = [];
-const vals2 = [];
-const expectedB = {};
+// const keys2 = [];
+// const vals2 = [];
+// const expectedB = {};
 
 
-/**
- * Converts the given arrays of keys and values into an object.
- * - Time: O(?).
- * - Space: O(?).
- * @param {Array<string>} keys
- * @param {Array<any>} values
- * @returns {Object} The object with the given keys and values.
- */
-function zipArraysIntoMap(keys, values) {
-    //Your code here
-}
-console.log(zipArraysIntoMap(keys1, vals1)) // expected: { flavor: 'chocolate', size: 10, is_delicious: true } (order may vary)
-console.log(zipArraysIntoMap(keys2, vals2)) // expected: {}
+// /**
+//  * Converts the given arrays of keys and values into an object.
+//  * - Time: O(?).
+//  * - Space: O(?).
+//  * @param {Array<string>} keys
+//  * @param {Array<any>} values
+//  * @returns {Object} The object with the given keys and values.
+//  */
+// function zipArraysIntoMap(keys, values) {
+//     //Your code here
+// }
+// console.log(zipArraysIntoMap(keys1, vals1)) // expected: { flavor: 'chocolate', size: 10, is_delicious: true } (order may vary)
+// console.log(zipArraysIntoMap(keys2, vals2)) // expected: {}

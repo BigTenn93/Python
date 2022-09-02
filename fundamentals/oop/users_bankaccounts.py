@@ -54,7 +54,9 @@ class User:
 user1 = User("Tony", "iamironman@gmail.com")
 user2 = User("Steve", "americasass@gmail.com")
 
+print("----------------")
 user1.make_deposit(10000).make_deposit(2500).make_deposit(5000).make_withdrawal(1750).interest().display_balance()
+print("----------------")
 user2.make_deposit(100).make_deposit(150).make_withdrawal(75).interest().display_balance()
 print("----------------")
 
