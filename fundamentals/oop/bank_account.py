@@ -29,3 +29,4 @@ USBank = BankAccount(0.0010, 800)
 
 Huntington.deposit(100).deposit(200).deposit(300).withdraw(1500).yield_interest().display_account_info()
 USBank.deposit(100).deposit(50).withdraw(25).withdraw(100).withdraw(50).withdraw(50).yield_interest().display_account_info()
+
