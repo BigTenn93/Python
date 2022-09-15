@@ -1,12 +1,11 @@
-from ast import Return
+from xml.etree.ElementTree import Comment
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
-from env import KEY
-app.secret_key = KEY
+app.secret_key = 'abc123'
 
 @app.route("/")
 def survey():
-    return render_template("survey.html")
+    return render_template("index.html")
 
 @app.route("/process", methods=["POST"])
 def submit():
@@ -18,10 +17,15 @@ def submit():
 
 @app.route("/info")
 def info():
-    return render_template('/info.html')
+    name = session['name']
+    location = session['location']
+    language = session['language']
+    comment = session['comment']
+    return render_template('/info.html', name = name, location = location, language = language, comment = comment)
 
-@app.route("/back")
-def restart():
+@app.route("/clear_session")
+def clear_sesion():
+    session.clear()
     return redirect("/")
 
 if __name__ == "__main__":
