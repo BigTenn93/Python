@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Dojo</title>
+</head>
+<body>
+    <p>
+    <h2>Location:</h2> {{one_dojo.name}}
+    </p>
+    <h3>Co-hort Mates for this Location:</h3>
+    {% if one_dojo.ninja_list[0].id == None %}
+    <p>No Ninjas Yet!</p>
+    {%else%}
+    {% for ninja in one_dojo.ninja_list%}
+    <p>{{ninja.first_name}} {{ninja.last_name}}</p>
+    {%endfor%}
+    {%endif%}
+    <a href="/">Home</a>
+</body>
+</html>

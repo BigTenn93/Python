@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos_Ninjas</title>
+</head>
+<body>
+    <h1>Dojos_Ninjas</h1>
+    <a href="/dojos/new">Add a Dojo</a>
+    <ul>
+        {% for one_dojo in all_dojos %}
+        <li>{{one_dojo.id}}) Location: <a href="/dojos/{{one_dojo.id}}">{{one_dojo.name}}</a>
+        <a href="/dojos/{{one_dojo.id}}/edit">Edit</a>
+        <a href="dojos/{{one_dojo.id}}/delete">Delete</a>
+    </li>
+        {%endfor%}
+    </ul>
+    <a href="/ninjas/new">Add New Ninja</a>
+</body>
+</html>
