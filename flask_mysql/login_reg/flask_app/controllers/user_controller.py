@@ -1,6 +1,7 @@
 from crypt import methods
 from flask import Flask, render_template, redirect, request, session
 from flask_app import app, bcrypt
+bcrypt = Bcrypt(app)
 from flask_app.models import user_model
 
 @app.route('/dashboard')
